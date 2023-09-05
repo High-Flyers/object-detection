@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 tensorflow = "*"
 pyyaml = "*"
-marshmallow-dataclass = "*"
 
 [dev-packages]
 mypy = "*"

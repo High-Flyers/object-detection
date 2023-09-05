@@ -1,0 +1,11 @@
+# User config file
+# Provide required settings, optional settings are commented
+
+
+# format module settings:
+
+# File format for files used for training the model, defaults to "jpg"
+# datdset_file_format:
+
+# Minimal amount of files for each label required for model training, defaults to 20
+# file_count_threshold:

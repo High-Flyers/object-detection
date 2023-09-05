@@ -3,15 +3,13 @@
 from pathlib import Path
 import re
 
-# TODO: read from config
-FILES_COUNT_THRESHOLD = 20
-FILE_FORMAT = "png"
+from src.core.config import config
 
 
 def validate_dataset(
     dataset_dir: Path,
-    threshold: int = FILES_COUNT_THRESHOLD,
-    file_format: str = FILE_FORMAT,
+    threshold: int = config.file_count_threshold,
+    file_format: str = config.dataset_file_format,
 ) -> bool:
     """Return True if dataset is valid."""
     if _contains_only_directories(dataset_dir):
