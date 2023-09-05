@@ -1,7 +1,7 @@
 import dataclasses
 from pathlib import Path
 
-from src.core.utils import load_yaml_dict
+from object_detection.core.utils import load_yaml_dict
 
 DEFAULT_CONFIG_PATH = Path("settings.test.yaml")
 
@@ -14,8 +14,10 @@ class Config:
 
     config_path: dataclasses.InitVar[Path | None] = None
 
-    dataset_file_format: str = "jpg"
+    dataset_file_format: str = "png"
     file_count_threshold: int = 20
+
+    dataset_split: float = 0.2
 
     def __post_init__(self, config_path: Path = None):
         """Load data from conifg file."""
