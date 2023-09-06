@@ -1,0 +1,17 @@
+# User config file
+# Provide required settings, optional settings are commented
+
+# Source directory for training data
+data_source: 
+
+# format module settings:
+
+# File format for files used for training the model, defaults to "jpg"
+# datdset_file_format:
+
+# Minimal amount of files for each label required for model training, defaults to 20
+# file_count_threshold:
+
+# Fraction of data to reserve for validation, defaults to 0.2
+# Must be a float value between 0 and 1
+# dataset_split: 
