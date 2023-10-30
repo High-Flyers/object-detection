@@ -1,0 +1,20 @@
+[build-system]
+requires = []
+# to add
+
+[project]
+name = "object_detection"
+version = "0.0.1"
+authors = [{ name = "Karolina Kozubik", email = "k4aro0@gmail.com" }]
+description = "Set of modules to improve training object detection models for our internal purposes."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: MIT License",
+    # "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/High-Flyers/object-detection"
+
