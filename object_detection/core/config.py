@@ -12,8 +12,7 @@ class Config:
     Holds all object-detection settings defined by user in settings.yaml file.
     """
 
-    config_path: dataclasses.InitVar[Path | None] = None
-
+    config_path: dataclasses.InitVar[Path]
     data_source: Path
 
     dataset_file_format: str = "png"
@@ -21,7 +20,7 @@ class Config:
 
     dataset_split: float = 0.2
 
-    def __post_init__(self, config_path: Path = None):
+    def __post_init__(self, config_path: Path):
         """Load data from conifg file."""
         if config_path:
             try:
@@ -32,8 +31,6 @@ class Config:
             for field, value in data.items():
                 if hasattr(self, field):
                     setattr(self, field, value)
-
-            self.data_source = Path(self.data_source)
 
 
 config = Config(config_path=DEFAULT_CONFIG_PATH)
