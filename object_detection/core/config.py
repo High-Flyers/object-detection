@@ -4,7 +4,7 @@ from pathlib import Path
 from object_detection.core.utils import load_yaml_dict
 
 DEFAULT_CONFIG_PATH = Path("settings.yaml")
-
+DEFAULT_DATA_SOURCE_PATH = Path("data_source")
 
 @dataclasses.dataclass
 class Config:
@@ -13,7 +13,7 @@ class Config:
     """
 
     config_path: dataclasses.InitVar[Path]
-    data_source: Path
+    data_source: Path = DEFAULT_DATA_SOURCE_PATH
 
     dataset_file_format: str = "png"
     file_count_threshold: int = 20
