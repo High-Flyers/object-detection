@@ -6,6 +6,7 @@ from object_detection.core.utils import load_yaml_dict
 DEFAULT_CONFIG_PATH = Path("settings.yaml")
 DEFAULT_DATA_SOURCE_PATH = Path("data_source")
 
+
 @dataclasses.dataclass
 class Config:
     """
