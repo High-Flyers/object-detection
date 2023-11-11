@@ -1,7 +1,8 @@
 """Tests for object_detection.format.dataset module."""
 import pytest
 
-from object_detection.format.dataset import validate_dataset_source, create_dataset
+from object_detection.format.dataset import (create_dataset,
+                                             validate_dataset_source)
 
 
 @pytest.mark.parametrize(

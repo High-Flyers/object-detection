@@ -1,7 +1,7 @@
 """Validators of the data provided by user."""
 
-from pathlib import Path
 import re
+from pathlib import Path
 
 
 def contains_only_directories(parent: Path) -> bool:

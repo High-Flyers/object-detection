@@ -1,9 +1,10 @@
 """Module for utility functions"""
+from pathlib import Path
+from typing import Any, Dict, Optional
+
 import yaml
 import yaml.parser
 import yaml.scanner
-from pathlib import Path
-from typing import Optional, Dict, Any
 
 
 def load_yaml_dict(path: Path) -> Optional[Dict[str, Any]]:

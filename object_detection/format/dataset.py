@@ -1,17 +1,15 @@
 """Module for dataset transformation"""
-import tensorflow as tf
-from tensorflow import keras as keras
-
 from pathlib import Path
 from typing import Literal
 
-from object_detection.format.validators import (
-    contains_only_directories,
-    contains_only_files,
-    contains_only_specified_format,
-    validate_enough_files,
-)
+import tensorflow as tf
+from tensorflow import keras as keras
+
 from object_detection.core.config import config
+from object_detection.format.validators import (contains_only_directories,
+                                                contains_only_files,
+                                                contains_only_specified_format,
+                                                validate_enough_files)
 
 Subset = Literal["training"] | Literal["validation"]
 
