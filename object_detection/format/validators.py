@@ -16,7 +16,7 @@ def contains_only_files(parent: Path) -> bool:
 
 def contains_only_specified_format(parent: Path, format: str) -> bool:
     """Returns Ture if there are only image files inside parent directory."""
-    return all(re.fullmatch(f"^.+\.{format}$", elem.name) for elem in parent.iterdir())
+    return all(re.fullmatch(rf"^.+\.{format}$", elem.name) for elem in parent.iterdir())
 
 
 def validate_enough_files(dir: Path, threshold: int) -> bool:

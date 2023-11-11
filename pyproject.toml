@@ -18,3 +18,8 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/High-Flyers/object-detection"
 
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
