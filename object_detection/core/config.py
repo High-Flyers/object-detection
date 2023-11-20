@@ -1,10 +1,10 @@
 import dataclasses
 from pathlib import Path
 
+from object_detection.core.exceptions import RequiredFieldException
 from object_detection.core.utils import load_yaml_dict
 
 DEFAULT_CONFIG_PATH = Path("settings.yaml")
-DEFAULT_DATA_SOURCE_PATH = Path("data_source")
 
 
 @dataclasses.dataclass
@@ -14,7 +14,7 @@ class Config:
     """
 
     config_path: dataclasses.InitVar[Path]
-    data_source: Path = DEFAULT_DATA_SOURCE_PATH
+    data_source: Path = None
 
     dataset_file_format: str = "png"
     file_count_threshold: int = 20
@@ -32,6 +32,9 @@ class Config:
             for field, value in data.items():
                 if hasattr(self, field):
                     setattr(self, field, value)
+
+        if self.data_source is None:
+            raise RequiredFieldException("data_source was not provided")
 
 
 config = Config(config_path=DEFAULT_CONFIG_PATH)
