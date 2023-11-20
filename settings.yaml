@@ -2,7 +2,7 @@
 # Provide required settings, optional settings are commented
 
 # Source directory for training data
-data_source: 
+data_source: ""
 
 # format module settings:
 
